@@ -1,0 +1,17 @@
+# קבצים שלא להעלות ל-Git
+
+# קבצי Word זמניים
+~$*.docx
+*.tmp
+
+# קבצים ישנים
+notebook_example.ipynb
+
+# קבצי Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# קבצי מערכת
+.DS_Store
+Thumbs.db
