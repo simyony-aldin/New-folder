@@ -1,172 +1,175 @@
 # Customer Segmentation Analysis 📊
-### פרויקט ניתוח וסיווג לקוחות באמצעות KMeans Clustering
+### Project: Customer segmentation using KMeans Clustering
 
 ---
 
-## תיאור הפרויקט 🎯
+## Project Description 🎯
 
-פרויקט זה מבצע ניתוח מעמיק של נתוני לקוחות באמצעות אלגוריתם KMeans Clustering, במטרה לזהות קבוצות לקוחות שונות ולספק תובנות עסקיות לשיפור האסטרטגיה השיווקית.
+This project performs an in-depth analysis of customer data using the KMeans clustering algorithm in order to identify distinct customer groups and provide business insights to improve marketing strategy.
 
 ---
 
-## מבנה הפרויקט 📁
+## Project Structure 📁
 
 ```
 📦 Customer-Segmentation-Analysis/
-├── 📓 my_notebook.ipynb                    # המחברת הראשית - ניתוח מלא
-├── 📊 Customer Data.csv                     # הנתונים המקוריים (8,950 לקוחות)
-├── 📈 Customer_Data_with_Clusters.csv      # הנתונים עם תוויות הקלאסטרים
-├── 📄 Clustering.pdf                        # מסמך נלווה
-├── 📝 README.md                             # קובץ זה
-└── 🔒 .gitignore                            # קבצים שלא להעלות
+├── 📓 my_notebook.ipynb                    # Main notebook – full analysis
+├── 📊 Customer Data.csv                    # Original data (8,950 customers)
+├── 📈 Customer_Data_with_Clusters.csv      # Data with assigned cluster labels
+├── 📄 Clustering.pdf                       # Supplementary document
+├── 📝 README.md                            # This file
+└── 🔒 .gitignore                           # Files to exclude from version control
 ```
 
 ---
 
-## נתונים 📋
+## Data 📋
 
-- **מספר לקוחות:** 8,950
-- **מספר משתנים:** 18 עמודות
-- **תקופת ניתוח:** 12 חודשים
+- **Number of customers:** 8,950
+- **Number of variables:** 18 columns
+- **Analysis period:** 12 months
 
-### משתנים עיקריים:
-- **BALANCE** - יתרה ממוצעת
-- **PURCHASES** - סכום קניות
-- **CREDIT_LIMIT** - מסגרת אשראי
-- **PAYMENTS** - תשלומים
-- **CASH_ADVANCE** - משיכות מזומן
-- ועוד...
+### Main variables:
+- **BALANCE** – average balance
+- **PURCHASES** – total purchase amount
+- **CREDIT_LIMIT** – credit limit
+- **PAYMENTS** – payments
+- **CASH_ADVANCE** – cash advances
+- And more...
 
 ---
 
-## שלבי הניתוח 🔍
+## Analysis Steps 🔍
 
-### 1️⃣ טעינת נתונים ובדיקות ראשוניות
-- בדיקת ערכים חסרים
-- סטטיסטיקות תיאוריות
-- זיהוי חריגות
+### 1️⃣ Data loading and initial checks
+- Check for missing values
+- Descriptive statistics
+- Outlier detection
 
-### 2️⃣ EDA - Exploratory Data Analysis
-- התפלגויות משתנים
-- מטריצת קורלציות
-- ויזואליזציות מתקדמות
+### 2️⃣ EDA – Exploratory Data Analysis
+- Variable distributions
+- Correlation matrix
+- Advanced visualizations
 
-### 3️⃣ Preprocessing - עיבוד מקדים
-- טיפול בערכים חסרים
-- תקינות נתונים
-- סטנדרטיזציה (StandardScaler)
+### 3️⃣ Preprocessing
+- Handling missing values
+- Data quality checks
+- Standardization (StandardScaler)
 
 ### 4️⃣ Elbow Method
-- קביעת מספר הקלאסטרים האופטימלי
-- **תוצאה: K=4**
+- Determining the optimal number of clusters
+- **Result: K = 4**
 
-### 5️⃣ אימון מודל KMeans
-- אימון המודל עם 4 קלאסטרים
-- פרופילינג של כל קלאסטר
-- ויזואליזציות
+### 5️⃣ Training the KMeans model
+- Training the model with 4 clusters
+- Profiling each cluster
+- Visualizations
 
-### 6️⃣ תובנות עסקיות
-- המלצות לכל קבוצת לקוחות
-- אסטרטגיות שיווק ממוקדות
-- ניהול סיכונים
+### 6️⃣ Business insights
+- Recommendations for each customer segment
+- Targeted marketing strategies
+- Risk management
 
 ---
 
-## תוצאות - 4 קבוצות לקוחות 🎯
+## Results – 4 Customer Segments 🎯
 
 ### 🔵 Cluster 0: Regular Shoppers (68.0%)
-**לקוחות רגילים - הבסיס העיקרי**
-- יתרה נמוכה-בינונית
-- קניות סדירות קטנות
-- תשלום minimum או חלקי
+**Regular customers – main customer base**
+- Low-to-medium balances
+- Small, regular purchases
+- Minimum or partial payments
 
 ### 🟢 Cluster 1: Cash Advance Seekers (15.1%)
-**מבקשי מזומן - סיכון גבוה**
-- משיכות מזומן תכופות
-- יתרה גבוהה יחסית
-- דורשים ניטור צמוד
+**Cash advance users – higher risk**
+- Frequent cash advances
+- Relatively high balances
+- Require close monitoring
 
 ### 🟡 Cluster 2: High-Value Customers (1.2%)
-**לקוחות VIP - הפנינים**
-- מסגרת אשראי גבוהה מאוד
-- קניות גדולות ותכופות
-- תשלומים גבוהים
+**VIP customers – the “gems”**
+- Very high credit limits
+- Large and frequent purchases
+- High payment amounts
 
 ### 🟣 Cluster 3: Full Payment Customers (15.7%)
-**משלמים מלאים - לקוחות איכותיים**
-- תשלום מלא חודשי
-- סיכון נמוך
-- נאמנות גבוהה
+**Full payers – high-quality customers**
+- Full monthly payments
+- Low risk
+- High loyalty
 
 ---
 
-## טכנולוגיות 🛠️
+## Technologies 🛠️
 
 - **Python 3.x**
-- **pandas** - עיבוד נתונים
-- **numpy** - חישובים מתמטיים
-- **scikit-learn** - KMeans Clustering
-- **matplotlib & seaborn** - ויזואליזציות
-- **Jupyter Notebook** - סביבת פיתוח
+- **pandas** – data processing
+- **numpy** – numerical computations
+- **scikit-learn** – KMeans clustering
+- **matplotlib & seaborn** – visualizations
+- **Jupyter Notebook** – development environment
 
 ---
 
-## איך להריץ? ▶️
+## How to Run ▶️
 
-1. **שכפל את הרפוזיטורי:**
+1. **Clone the repository:**
+
 ```bash
 git clone https://github.com/simyony-aldin/New-folder.git
 cd New-folder
 ```
 
-2. **התקן את החבילות הנדרשות:**
+2. **Install the required packages:**
+
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn jupyter
 ```
 
-3. **הרץ את המחברת:**
+3. **Run the notebook:**
+
 ```bash
 jupyter notebook my_notebook.ipynb
 ```
 
 ---
 
-## תובנות עיקריות 💡
+## Key Insights 💡
 
-✅ **68%** מהלקוחות הם "קונים רגילים" - בסיס יציב
-⚠️ **15.1%** משתמשים במשיכות מזומן - דורשים ניטור
-🌟 **1.2%** לקוחות VIP - מייצרים רווחים גבוהים
-✨ **15.7%** משלמים מלאים - לקוחות אידיאליים
-
----
-
-## המלצות עסקיות 🎯
-
-### 📈 אסטרטגיות שיווק:
-1. **Regular Shoppers** - תוכניות נאמנות וקופונים
-2. **Cash Advance** - שיפור תנאי אשראי ומניעת nurn
-3. **High-Value** - שירות VIP ומבצעים אקסקלוסיביים
-4. **Full Payment** - הטבות לנאמנות ארוכת טווח
-
-### 💰 פוטנציאל רווח:
-- **ROI צפוי:** $3-5M בשנה הראשונה
-- **שיפור retention:** 15-25%
-- **הגדלת CLV:** 20-30%
+✅ **68%** of customers are “Regular Shoppers” – a stable core base  
+⚠️ **15.1%** use cash advances frequently – require monitoring  
+🌟 **1.2%** are VIP customers – generate high profits  
+✨ **15.7%** are full-payment customers – ideal low-risk clients
 
 ---
 
-## יוצר הפרויקט 👨‍💻
+## Business Recommendations 🎯
+
+### 📈 Marketing strategies:
+1. **Regular Shoppers** – loyalty programs and coupons
+2. **Cash Advance** – improved credit terms and churn prevention
+3. **High-Value** – VIP service and exclusive offers
+4. **Full Payment** – long-term loyalty benefits
+
+### 💰 Revenue potential:
+- **Expected ROI:** $3–5M in the first year
+- **Retention improvement:** 15–25%
+- **Increase in CLV:** 20–30%
+
+---
+
+## Project Author 👨‍💻
 
 **simyony-aldin**
 
-📅 תאריך: פברואר 2026
+📅 Date: February 2026
 
 ---
 
-## רישיון 📄
+## License 📄
 
-פרויקט זה נוצר למטרות למידה והדגמה.
+This project was created for learning and demonstration purposes.
 
 ---
 
-### ⭐ אם הפרויקט עזר לך, תן כוכב!
+### ⭐ If this project helped you, consider giving it a star!
